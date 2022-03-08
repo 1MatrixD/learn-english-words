@@ -42,10 +42,10 @@ async function init() {
 
         const targetValue = e.target.innerText;
         if (targetValue === rus) {
-            if (isRus) {
-                speak(rus);
-            } else {
+            if (/[a-z]/g.test(eng.toLowerCase())) {
                 speak(eng);
+            } else {
+                speak(rus);
             }
 
             word.right();

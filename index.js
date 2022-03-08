@@ -10,6 +10,10 @@ app.get('/rus', async (req, res) => {
     res.sendfile('./frontend/index.html');
 });
 
+app.get('/random', async (req, res) => {
+    res.sendfile('./frontend/index.html');
+});
+
 app.listen(3333, async () => {
     console.log('Started!');
 });
