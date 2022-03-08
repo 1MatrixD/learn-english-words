@@ -1,0 +1,5 @@
+# modules
+node_modules
+
+# trash
+package-lock.json
