@@ -42,7 +42,11 @@ async function init() {
 
         const targetValue = e.target.innerText;
         if (targetValue === rus) {
-            speak(eng);
+            if (isRus) {
+                speak(rus);
+            } else {
+                speak(eng);
+            }
 
             word.right();
             await colorText(targetValue);

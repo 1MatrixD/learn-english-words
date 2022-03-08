@@ -49,15 +49,15 @@ class Word {
         const [prev_eng, prev_rus, ...prev_other] = this.repeats[step - 1] || [];
         const [next_eng, next_rus, ...next_other] = this.repeats[step + 1] || [];
 
-        if (eng != prev_eng && rus != prev_rus) {
-            return true;
+        if (eng == prev_eng && rus == prev_rus) {
+            return false;
         }
 
-        if (eng != next_eng && rus != next_rus) {
-            return true;
+        if (eng == next_eng && rus == next_rus) {
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     createRepeats() {

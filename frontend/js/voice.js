@@ -6,7 +6,11 @@ function langs() {
     return voices;
 }
 
-function speak(text = '', index=window.navigator.platform === 'Win32' ? 3 : 5) {
+function speak(text = '', index) {
+    if (index === undefined) {
+        index = window.navigator.platform === 'Win32' ? 3 : 5;
+    }
+
     const speech = window.speechSynthesis;
     const voice = speech.getVoices()[index];
 
