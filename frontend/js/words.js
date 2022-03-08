@@ -46,8 +46,8 @@ class Word {
     }
 
     checkAntiDupe(eng, rus, step) {
-        const [prev_eng, prev_rus] = this.repeats[step - 1] || [];
-        const [next_eng, next_rus] = this.repeats[step + 1] || [];
+        const [prev_eng, prev_rus, ...prev_other] = this.repeats[step - 1] || [];
+        const [next_eng, next_rus, ...next_other] = this.repeats[step + 1] || [];
 
         if (eng != prev_eng && rus != prev_rus) {
             return true;
